@@ -3,7 +3,10 @@ import 'package:trendy_style/screens/cart/cart.dart';
 import 'package:trendy_style/screens/checkout/checkout.dart';
 import 'package:trendy_style/screens/home/home_page.dart';
 import 'package:trendy_style/screens/home/main_home_page.dart';
+import 'package:trendy_style/screens/order/order.dart';
 import 'package:trendy_style/screens/product/product_detail.dart';
+import 'package:trendy_style/screens/profile/edit_profile.dart';
+import 'package:trendy_style/screens/profile/profile.dart';
 import 'package:trendy_style/screens/shipping/shipping_address.dart';
 
 void main() {
@@ -31,8 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ShippingAddress(),
+      home: EditProfile(),
     );
   }
 }
-

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trendy_style/screens/cart/cart.dart';
 import 'package:trendy_style/screens/home/main_home_page.dart';
+import 'package:trendy_style/screens/profile/profile.dart';
 import 'package:trendy_style/utilities/colors.dart';
 
 import '../../icons/my_flutter_app_icons.dart';
@@ -15,25 +16,25 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List pages = [
     const MainHomePage(),
+    const Cart(),
     const MainHomePage(),
     const MainHomePage(),
-    const MainHomePage(),
-    const MainHomePage(),
+    const Profile(),
   ];
   int currentIndex = 0;
 
-  void onTap(int index){
+  void onTap(int index) {
     setState(() {
       currentIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[currentIndex],
-      bottomNavigationBar: bottomNavigationBar
-    );
+        body: pages[currentIndex], bottomNavigationBar: bottomNavigationBar);
   }
+
   Widget get bottomNavigationBar {
     return Container(
         decoration: BoxDecoration(
@@ -42,10 +43,7 @@ class _HomePageState extends State<HomePage> {
           // boxShadow: [
           //   BoxShadow(color: Colors.black12, spreadRadius: 0, blurRadius: 10),
           // ],
-          border: Border.all(
-            width: .2,
-            color: AppColors.primaryText
-          ),
+          border: Border.all(width: .2, color: AppColors.primaryText),
         ),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
@@ -65,14 +63,17 @@ class _HomePageState extends State<HomePage> {
               unselectedFontSize: 10,
               elevation: 0,
               items: const [
-                BottomNavigationBarItem(icon: Icon(MyFlutterApp.home), label: "HOME"),
-                BottomNavigationBarItem(icon: Icon(MyFlutterApp.cart), label: "CART"),
-                BottomNavigationBarItem(icon: Icon(MyFlutterApp.camera, size: 35), label: "TRY ON"),
-                BottomNavigationBarItem(icon: Icon(MyFlutterApp.bag), label: "CLOSET"),
-                BottomNavigationBarItem(icon: Icon(MyFlutterApp.profile), label: "PROFILE"),
-              ]
-          ),
+                BottomNavigationBarItem(
+                    icon: Icon(MyFlutterApp.home), label: "HOME"),
+                BottomNavigationBarItem(
+                    icon: Icon(MyFlutterApp.cart), label: "CART"),
+                BottomNavigationBarItem(
+                    icon: Icon(MyFlutterApp.camera, size: 35), label: "TRY ON"),
+                BottomNavigationBarItem(
+                    icon: Icon(MyFlutterApp.bag), label: "CLOSET"),
+                BottomNavigationBarItem(
+                    icon: Icon(MyFlutterApp.profile), label: "PROFILE"),
+              ]),
         ));
   }
 }
-
