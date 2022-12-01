@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
@@ -17,7 +16,7 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   final List<String> entries = <String>['All', 'Women', 'Men'];
-  int _count = 6;
+  final int _count = 6;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +44,7 @@ class _MainHomePageState extends State<MainHomePage> {
                       color: Colors.black12, spreadRadius: 0, blurRadius: 5),
                 ],
               ),
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 backgroundImage: NetworkImage(
                     "https://w7.pngwing.com/pngs/340/956/png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper.png",
                     scale: 1),
@@ -58,20 +57,20 @@ class _MainHomePageState extends State<MainHomePage> {
       body: SingleChildScrollView(
         child: Container(
           height: 490 + 100 * _count.toDouble(),
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       child: TextField(
                         decoration: InputDecoration(
                           focusColor: AppColors.mainColor,
@@ -85,13 +84,13 @@ class _MainHomePageState extends State<MainHomePage> {
                           ),
                           hintText: "Search here",
                           hintStyle: AppFonts.regular(14),
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             MyFlutterApp.search,
                             size: 24,
                           ),
                           isDense: true, // Added this
                           contentPadding:
-                              EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+                              const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                         ),
                       ),
                     ),
@@ -99,18 +98,18 @@ class _MainHomePageState extends State<MainHomePage> {
                   Container(
                     width: 46,
                     height: 46,
-                    margin: EdgeInsets.only(top: 5, bottom: 5, left: 20),
+                    margin: const EdgeInsets.only(top: 5, bottom: 5, left: 20),
                     decoration: BoxDecoration(
                       color: AppColors.mainColor,
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
-                      boxShadow: [
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
+                      boxShadow: const [
                         BoxShadow(
                             color: Colors.black12,
                             spreadRadius: 0,
                             blurRadius: 10),
                       ],
                     ),
-                    child: Icon(
+                    child: const Icon(
                       MyFlutterApp.filter,
                       color: Colors.white,
                     ),
@@ -118,29 +117,29 @@ class _MainHomePageState extends State<MainHomePage> {
                   //Expanded(child: Text("anh vui ve"))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Container(
+              SizedBox(
                 height: 52,
                 child: ListView.separated(
                     scrollDirection: Axis.horizontal,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: entries.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
                         width: 110,
                         height: 46,
-                        margin: EdgeInsets.symmetric(vertical: 8),
+                        margin: const EdgeInsets.symmetric(vertical: 8),
                         decoration: BoxDecoration(
                           color: index != 0
                               ? AppColors.grayColor
                               : AppColors.mainColor,
-                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                          borderRadius: const BorderRadius.all(Radius.circular(7)),
                         ),
                         child: Center(
                             child: Text(
-                          '${entries[index]}',
+                          entries[index],
                           style: TextStyle(
                               color: index != 0
                                   ? AppColors.primaryText
@@ -148,17 +147,17 @@ class _MainHomePageState extends State<MainHomePage> {
                         )),
                       );
                     },
-                    separatorBuilder: (context, index) => SizedBox(
+                    separatorBuilder: (context, index) => const SizedBox(
                           width: 15,
                         )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 height: 150,
-                margin: EdgeInsets.symmetric(vertical: 8),
-                decoration: BoxDecoration(
+                margin: const EdgeInsets.symmetric(vertical: 8),
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -171,13 +170,13 @@ class _MainHomePageState extends State<MainHomePage> {
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: SvgPicture.asset(
                         "assets/images/car.svg",
                       ),
                     ),
                     Container(
-                        padding: EdgeInsets.only(right: 10),
+                        padding: const EdgeInsets.only(right: 10),
                         width: 165,
                         child: RichText(
                           text: TextSpan(
@@ -193,7 +192,7 @@ class _MainHomePageState extends State<MainHomePage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SizedBox(
@@ -215,7 +214,7 @@ class _MainHomePageState extends State<MainHomePage> {
                       ShopLogo(icon: Icons.more_horiz_outlined, name: "More"),
                     ]),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -233,12 +232,12 @@ class _MainHomePageState extends State<MainHomePage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Expanded(
                 child: GridView.count(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     padding: EdgeInsets.zero,
                     primary: false,
                     crossAxisSpacing: 10,
@@ -252,7 +251,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
+                                  SizedBox(
                                     width: 350,
                                     child: SvgPicture.asset(
                                       "assets/images/car.svg",
@@ -284,15 +283,14 @@ class _MainHomePageState extends State<MainHomePage> {
                                             minRating: 1,
                                             direction: Axis.horizontal,
                                             itemCount: 5,
-                                            itemPadding: EdgeInsets.symmetric(
+                                            itemPadding: const EdgeInsets.symmetric(
                                                 horizontal: 2.0),
-                                            itemBuilder: (context, _) => Icon(
+                                            itemBuilder: (context, _) => const Icon(
                                               MyFlutterApp.star,
                                               color: Colors.amber,
                                             ),
                                             itemSize: 16,
                                             onRatingUpdate: (rating) {
-                                              print(rating);
                                             },
                                           ),
                                         ],

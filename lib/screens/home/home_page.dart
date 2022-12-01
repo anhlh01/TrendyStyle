@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   Widget get bottomNavigationBar {
     return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topRight: Radius.circular(18.0), topLeft: Radius.circular(18.0)),
           // boxShadow: [
           //   BoxShadow(color: Colors.black12, spreadRadius: 0, blurRadius: 10),

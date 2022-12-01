@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
 import 'package:trendy_style/utilities/colors.dart';
 
+// ignore: must_be_immutable
 class ShopLogo extends StatelessWidget {
   ShopLogo({super.key, required this.icon, required this.name});
   IconData icon;

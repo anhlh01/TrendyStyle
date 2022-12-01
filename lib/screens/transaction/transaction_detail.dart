@@ -26,7 +26,7 @@ class TransactionDetail extends StatelessWidget {
         padding: const EdgeInsets.all(15.0),
         child: Column(children: [
           Center(
-            child: Container(
+            child: SizedBox(
               height: 110,
               width: 370,
               child: SfBarcodeGenerator(
@@ -36,7 +36,7 @@ class TransactionDetail extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
@@ -48,7 +48,7 @@ class TransactionDetail extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Amount"),
                     Text(
                       "\$1,458.28",
@@ -56,13 +56,13 @@ class TransactionDetail extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Shipping"),
                     Text(
                       "\$15.00",
@@ -70,13 +70,13 @@ class TransactionDetail extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Promo"),
                     Text(
                       "-\$364.57",
@@ -84,19 +84,19 @@ class TransactionDetail extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Divider(
                   color: AppColors.primaryText,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Total"),
                     Text(
                       "\$1,108.71",
@@ -107,7 +107,7 @@ class TransactionDetail extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
@@ -119,7 +119,7 @@ class TransactionDetail extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Payment Methods"),
                     Text(
                       "Paypal",
@@ -127,28 +127,28 @@ class TransactionDetail extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Date"),
+                    const Text("Date"),
                     Text(
                       DateFormat("MMM dd, yyyy | HH:mm:ss a")
                           .format(DateTime.now()),
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Transaction ID"),
                     Text(
                       "KU459766887",
@@ -156,21 +156,21 @@ class TransactionDetail extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Status"),
+                    const Text("Status"),
                     Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                          const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                       decoration: BoxDecoration(
                           color: AppColors.primaryColor,
                           borderRadius: BorderRadius.circular(7)),
-                      child: Text(
+                      child: const Text(
                         "Paid",
                         style: TextStyle(color: Colors.white),
                       ),

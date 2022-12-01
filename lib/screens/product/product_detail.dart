@@ -1,8 +1,6 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:trendy_style/utilities/colors.dart';
-import 'package:trendy_style/utilities/fonts.dart';
 
 import '../../icons/my_flutter_app_icons.dart';
 
@@ -37,19 +35,19 @@ class ProductDetail extends StatelessWidget {
                 ),
               ),
               bottom: PreferredSize(
-                preferredSize: Size.fromHeight(20),
+                preferredSize: const Size.fromHeight(20),
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 140),
-                  child: Divider(
-                    thickness: 3,
-                    color: AppColors.primaryText,
-                  ),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 140),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30),
                       )
+                  ),
+                  child: Divider(
+                    thickness: 3,
+                    color: AppColors.primaryText,
                   ),
                 ),
               ),
@@ -61,13 +59,13 @@ class ProductDetail extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Girls Shots with Sun Glasses and sandals", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),),
-                    SizedBox(height: 25,),
+                    const Text("Girls Shots with Sun Glasses and sandals", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),),
+                    const SizedBox(height: 25,),
                     Text(
                       "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "'Contenido aquí, contenido aquí'".",
                       style: TextStyle(color: AppColors.primaryText, fontSize: 15),
                     ),
-                    SizedBox(height: 15,),
+                    const SizedBox(height: 15,),
                     Row(
                       children: [
                         Icon(MyFlutterApp.star, size: 26, color: AppColors.starColor,),
@@ -75,13 +73,13 @@ class ProductDetail extends StatelessWidget {
                         Icon(MyFlutterApp.star, size: 26, color: AppColors.starColor,),
                         Icon(MyFlutterApp.star, size: 26, color: AppColors.starColor,),
                         Icon(MyFlutterApp.star, size: 26, color: AppColors.starColor,),
-                        SizedBox(width: 20,),
+                        const SizedBox(width: 20,),
                         Text("4,2567 Reveiws", style: TextStyle(fontWeight: FontWeight.bold, decoration: TextDecoration.underline, fontSize: 16, color: AppColors.primaryText),),
                       ],
                     ),
-                    SizedBox(height: 20,),
+                    const SizedBox(height: 20,),
                     DottedLine(dashLength: 10, dashGapLength: 10, dashColor: AppColors.primaryText,),
-                    SizedBox(height: 35,),
+                    const SizedBox(height: 35,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -90,25 +88,25 @@ class ProductDetail extends StatelessWidget {
                             // Respond to button press
                           },
                           style: OutlinedButton.styleFrom(
-                            minimumSize: Size(30, 30),
+                            minimumSize: const Size(30, 30),
                             side: BorderSide(color: AppColors.mainColor),
                             textStyle: TextStyle(color: AppColors.mainColor, fontWeight: FontWeight.bold, fontSize: 18),
                           ),
                           child: Icon(Icons.remove, color: AppColors.mainColor,)
                         ),
-                        SizedBox(width: 20,),
-                        Text("1", style: TextStyle(fontSize: 18),),
-                        SizedBox(width: 20,),
+                        const SizedBox(width: 20,),
+                        const Text("1", style: TextStyle(fontSize: 18),),
+                        const SizedBox(width: 20,),
                         ElevatedButton(
                           onPressed: () {
                             // Respond to button press
                           },
                           style: ElevatedButton.styleFrom(
-                            minimumSize: Size(30, 30),
+                            minimumSize: const Size(30, 30),
                             backgroundColor: AppColors.mainColor,
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                                 fontWeight: FontWeight.bold),),
-                          child: Icon(Icons.add)
+                          child: const Icon(Icons.add)
                         )
                       ],
                     )
@@ -127,7 +125,7 @@ class ProductDetail extends StatelessWidget {
                   // Respond to button press
                 },
                 style: OutlinedButton.styleFrom(
-                  minimumSize: Size(175, 46),
+                  minimumSize: const Size(175, 46),
                   side: BorderSide(color: AppColors.mainColor),
                   textStyle: TextStyle(color: AppColors.mainColor, fontWeight: FontWeight.bold, fontSize: 18),
                 ),
@@ -138,11 +136,11 @@ class ProductDetail extends StatelessWidget {
                   // Respond to button press
                 },
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(175, 46),
+                  minimumSize: const Size(175, 46),
                   backgroundColor: AppColors.mainColor,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       fontWeight: FontWeight.bold),),
-                child: Text('Buy it now', style: TextStyle(fontSize: 18),),
+                child: const Text('Buy it now', style: TextStyle(fontSize: 18),),
               )
             ],
           )

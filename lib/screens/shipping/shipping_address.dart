@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
@@ -13,9 +11,8 @@ class ShippingAddress extends StatefulWidget {
 }
 
 class _ShippingAddressState extends State<ShippingAddress> {
-  bool? _isCheck = false;
-  int _count = 10;
-  List<bool> _checkList = [];
+  final int _count = 10;
+  final List<bool> _checkList = [];
   _ShippingAddressState(){
     for(var i = 0; i < _count; i++){
       _checkList.add(true);
@@ -40,7 +37,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
               'Shipping Address',
             ),
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(
+              IconButton(onPressed: (){}, icon: const Icon(
                 Icons.add,
                 color: Colors.black,
               ))
@@ -50,8 +47,8 @@ class _ShippingAddressState extends State<ShippingAddress> {
               itemCount: _count,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  padding: EdgeInsets.all(15),
-                  margin: EdgeInsets.only(left: 18, right: 18, top: 10),
+                  padding: const EdgeInsets.all(15),
+                  margin: const EdgeInsets.only(left: 18, right: 18, top: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -68,7 +65,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             'Home',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -108,11 +105,11 @@ class _ShippingAddressState extends State<ShippingAddress> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                       side: BorderSide.none),
-                  minimumSize: Size(350, 46),
+                  minimumSize: const Size(350, 46),
                   backgroundColor: AppColors.mainColor,
-                  textStyle: TextStyle(fontWeight: FontWeight.bold),
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold),
                 ),
-                child: Text(
+                child: const Text(
                   'Apply',
                   style: TextStyle(fontSize: 18),
                 ),

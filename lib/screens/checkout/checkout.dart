@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
@@ -36,22 +35,22 @@ class _CheckoutState extends State<Checkout> {
             // ],
           ),
           body: SingleChildScrollView(
-            child: Container(
+            child: SizedBox(
               height: 415 + count * 160,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 18, right: 18, top: 10),
+                    margin: const EdgeInsets.only(left: 18, right: 18, top: 10),
                     child: Text(
                       "Address",
                       style: AppFonts.medium(24),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
-                    margin: EdgeInsets.only(left: 18, right: 18, top: 10),
+                    padding: const EdgeInsets.all(15),
+                    margin: const EdgeInsets.only(left: 18, right: 18, top: 10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
@@ -68,7 +67,7 @@ class _CheckoutState extends State<Checkout> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               'Home',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -101,7 +100,7 @@ class _CheckoutState extends State<Checkout> {
                   ),
                   Expanded(
                     child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         primary: false,
                         shrinkWrap: true,
                         padding: const EdgeInsets.all(8),
@@ -114,8 +113,8 @@ class _CheckoutState extends State<Checkout> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             margin:
-                                EdgeInsets.only(left: 10, right: 10, top: 10),
-                            padding: EdgeInsets.all(15),
+                                const EdgeInsets.only(left: 10, right: 10, top: 10),
+                            padding: const EdgeInsets.all(15),
                             child: Row(
                               children: [
                                 Container(
@@ -132,7 +131,7 @@ class _CheckoutState extends State<Checkout> {
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
                                 Column(
@@ -146,13 +145,13 @@ class _CheckoutState extends State<Checkout> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Nike Air Presto',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 16),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 29,
                                         ),
                                         Container(
@@ -181,26 +180,26 @@ class _CheckoutState extends State<Checkout> {
                                                 BorderRadius.circular(30),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 8,
                                         ),
-                                        Text(
+                                        const Text(
                                           'Blue',
                                           style: TextStyle(fontSize: 12),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 8,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                             height: 20,
                                             child: VerticalDivider(
                                               thickness: 1,
                                               color: Colors.black,
                                             )),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 8,
                                         ),
-                                        Text(
+                                        const Text(
                                           'Size = M',
                                           style: TextStyle(fontSize: 12),
                                         ),
@@ -214,7 +213,7 @@ class _CheckoutState extends State<Checkout> {
                                               fontSize: 20,
                                               color: AppColors.primaryColor),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 30,
                                         ),
                                         Container(
@@ -230,16 +229,16 @@ class _CheckoutState extends State<Checkout> {
                                               size: 16,
                                               color: AppColors.primaryColor,
                                             )),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 10,
                                         ),
-                                        Text(
+                                        const Text(
                                           '1',
                                           style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 10,
                                         ),
                                         Container(
@@ -265,7 +264,7 @@ class _CheckoutState extends State<Checkout> {
                         }),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 18, right: 18, top: 10),
+                    margin: const EdgeInsets.only(left: 18, right: 18, top: 10),
                     child: Text(
                       "Chose Shipping",
                       style: AppFonts.medium(24),
@@ -280,7 +279,7 @@ class _CheckoutState extends State<Checkout> {
                           Icons.local_shipping_outlined,
                           color: AppColors.primaryColor,
                         ),
-                        title: Text('Chose Shipping Type'),
+                        title: const Text('Chose Shipping Type'),
                         trailing: Icon(
                           Icons.chevron_right,
                           color: AppColors.primaryColor,
@@ -292,7 +291,7 @@ class _CheckoutState extends State<Checkout> {
                     margin: const EdgeInsets.only(
                         left: 18, right: 18, top: 10, bottom: 10),
                     padding: const EdgeInsets.all(18),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
                     child: Column(
@@ -300,7 +299,7 @@ class _CheckoutState extends State<Checkout> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text("Amount"),
                             Text(
                               "\$1,458.28",
@@ -308,13 +307,13 @@ class _CheckoutState extends State<Checkout> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text("Shipping"),
                             Text(
                               "-",
@@ -322,19 +321,19 @@ class _CheckoutState extends State<Checkout> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Divider(
                           color: AppColors.primaryColor,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text("Total"),
                             Text(
                               "-",
@@ -359,15 +358,15 @@ class _CheckoutState extends State<Checkout> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                       side: BorderSide.none),
-                  minimumSize: Size(340, 52),
-                  maximumSize: Size(340, 52),
+                  minimumSize: const Size(340, 52),
+                  maximumSize: const Size(340, 52),
                   backgroundColor: AppColors.mainColor,
-                  textStyle: TextStyle(fontWeight: FontWeight.bold),
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'CONTINUE TO PAYMENT',
                       style: TextStyle(fontSize: 18),

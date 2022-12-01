@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
 
+// ignore: must_be_immutable
 class EditProfileItem extends StatelessWidget {
   EditProfileItem({super.key, required this.text, this.icon});
   //String lable;
@@ -31,7 +30,7 @@ class EditProfileItem extends StatelessWidget {
                     color: AppColors.mainColor,
                   ),
                 ),
-                contentPadding: EdgeInsets.only(left: 10),
+                contentPadding: const EdgeInsets.only(left: 10),
                 filled: true,
                 fillColor: AppColors.grayColor,
                 focusColor: AppColors.grayColor,
@@ -39,8 +38,8 @@ class EditProfileItem extends StatelessWidget {
                 //labelText: lable,
                 labelStyle: AppFonts.medium(16),
                 //errorText: 'Error message',
-                border: OutlineInputBorder(
-                  borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                border: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
               ),
             ),
@@ -65,7 +64,7 @@ class EditProfileItem extends StatelessWidget {
                     color: AppColors.blueColor,
                   ),
                 ),
-                contentPadding: EdgeInsets.only(left: 10),
+                contentPadding: const EdgeInsets.only(left: 10),
                 filled: true,
                 fillColor: AppColors.grayColor,
                 focusColor: AppColors.grayColor,
@@ -73,12 +72,12 @@ class EditProfileItem extends StatelessWidget {
                 //labelText: lable,
                 labelStyle: AppFonts.medium(16),
                 //errorText: 'Error message',
-                border: OutlineInputBorder(
-                  borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                border: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
                 suffixIcon: Icon(
                   icon,
-                  color: Color.fromARGB(255, 198, 198, 198),
+                  color: const Color.fromARGB(255, 198, 198, 198),
                 ),
               ),
             ),

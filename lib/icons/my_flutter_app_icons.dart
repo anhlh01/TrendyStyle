@@ -59,4 +59,8 @@ class MyFlutterApp {
       IconData(0xe815, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData position =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData package =
+      IconData(0xf383, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData check =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:intl/intl.dart';
-import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
 import 'package:trendy_style/widgets/edit_profile_item.dart';
@@ -18,7 +15,7 @@ class EditProfile extends StatefulWidget {
 class _EditProfileState extends State<EditProfile> {
   DateTime _date = DateTime(2001, 11, 01);
   final DateFormat formatter = DateFormat('dd-MM-yyyy');
-  TextEditingController _updateDate = new TextEditingController();
+  final TextEditingController _updateDate = TextEditingController();
   void _selectDate() async {
     final DateTime? newDate = await showDatePicker(
       context: context,
@@ -28,7 +25,6 @@ class _EditProfileState extends State<EditProfile> {
       helpText: 'Select a date',
     );
     if (newDate != null) {
-      print(newDate);
       setState(() {
         _date = newDate;
       });
@@ -56,7 +52,7 @@ class _EditProfileState extends State<EditProfile> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,18 +61,18 @@ class _EditProfileState extends State<EditProfile> {
                   "Full Name",
                   style: AppFonts.medium(14),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 EditProfileItem(text: "Anh vui ve"),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
                   "Birth Date",
                   style: AppFonts.medium(14),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
@@ -99,50 +95,51 @@ class _EditProfileState extends State<EditProfile> {
                           color: AppColors.mainColor,
                         ),
                       ),
-                      contentPadding: EdgeInsets.only(left: 10),
+                      contentPadding: const EdgeInsets.only(left: 10),
                       filled: true,
                       fillColor: AppColors.grayColor,
                       labelStyle: AppFonts.medium(16),
                       hintText: formatter.format(_date),
                       floatingLabelBehavior: FloatingLabelBehavior.always,
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(8.0)),
+                              BorderRadius.all(Radius.circular(8.0)),
                           borderSide:
                               BorderSide(color: Colors.blue, width: 20)),
-                      suffixIcon: Icon(Icons.calendar_month),
+                      suffixIcon: const Icon(Icons.calendar_month),
                     ),
                     readOnly: true,
                     onTap: () => _selectDate(),
+                    // ignore: avoid_print
                     onChanged: (value) => print(value),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
                   "Email",
                   style: AppFonts.medium(14),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 EditProfileItem(
                   text: "anhvuive@gmail.com",
                   icon: Icons.email_outlined,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
                   "Phone",
                   style: AppFonts.medium(14),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 IntlPhoneField(
-                  flagsButtonPadding: EdgeInsets.only(left: 10),
+                  flagsButtonPadding: const EdgeInsets.only(left: 10),
                   enabled: false,
                   readOnly: true,
                   decoration: InputDecoration(
@@ -171,27 +168,27 @@ class _EditProfileState extends State<EditProfile> {
                       ),
                     ),
                     hintText: "0977186011",
-                    contentPadding: EdgeInsets.only(left: 10),
+                    contentPadding: const EdgeInsets.only(left: 10),
                   ),
                   initialCountryCode: 'VN',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(
                   "Gender",
                   style: AppFonts.medium(14),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
                   height: 46,
                   child: DropdownButtonFormField(
-                    icon: Icon(Icons.expand_more),
+                    icon: const Icon(Icons.expand_more),
                     iconEnabledColor: AppColors.mainColor,
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 10, right: 10),
+                      contentPadding: const EdgeInsets.only(left: 10, right: 10),
                       focusedBorder: OutlineInputBorder(
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0)),
@@ -235,15 +232,15 @@ class _EditProfileState extends State<EditProfile> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     side: BorderSide.none),
-                minimumSize: Size(340, 52),
-                maximumSize: Size(340, 52),
+                minimumSize: const Size(340, 52),
+                maximumSize: const Size(340, 52),
                 backgroundColor: AppColors.mainColor,
-                textStyle: TextStyle(fontWeight: FontWeight.bold),
+                textStyle: const TextStyle(fontWeight: FontWeight.bold),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     'UPDATE',
                     style: TextStyle(fontSize: 18),

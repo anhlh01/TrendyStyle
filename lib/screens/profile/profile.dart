@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
@@ -37,7 +35,7 @@ class _ProfileState extends State<Profile> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Stack(children: [
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundColor: Colors.blue,
                   backgroundImage:
                       AssetImage("assets/images/product_detail_background.png"),
@@ -48,14 +46,14 @@ class _ProfileState extends State<Profile> {
                   top: 100,
                   child: InkWell(
                     child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: AppColors.primaryColor,
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Icon(
                             MyFlutterApp.edit,
                             size: 16,
@@ -65,7 +63,7 @@ class _ProfileState extends State<Profile> {
                   ),
                 )
               ]),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
@@ -76,18 +74,18 @@ class _ProfileState extends State<Profile> {
                     "Anh Vui Ve",
                     style: AppFonts.medium(20),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text("098-4892-489")
+                  const Text("098-4892-489")
                 ],
               )
             ],
           ),
           Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.only(top: 20),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.only(top: 20),
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
               color: Colors.white,
             ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 import 'package:trendy_style/utilities/colors.dart';
 import 'package:trendy_style/utilities/fonts.dart';
@@ -33,7 +32,7 @@ class _CartState extends State<Cart> {
               'Cart',
             ),
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(MyFlutterApp.cart, color: Colors.black,))
+              IconButton(onPressed: (){}, icon: const Icon(MyFlutterApp.cart, color: Colors.black,))
             ],
           ),
           body: ListView.builder(
@@ -46,8 +45,8 @@ class _CartState extends State<Cart> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  margin: EdgeInsets.only(left: 10, right: 10, top: 10),
-                  padding: EdgeInsets.all(15),
+                  margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                  padding: const EdgeInsets.all(15),
                   child: Row(
                     children: [
                       Container(
@@ -63,7 +62,7 @@ class _CartState extends State<Cart> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      SizedBox(width: 15,),
+                      const SizedBox(width: 15,),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,8 +71,8 @@ class _CartState extends State<Cart> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text('Nike Air Presto', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                              SizedBox(width: 29,),
+                              const Text('Nike Air Presto', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                              const SizedBox(width: 29,),
                               Container(
                                   width: 40,
                                   height: 40,
@@ -95,18 +94,18 @@ class _CartState extends State<Cart> {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                               ),
-                              SizedBox(width: 8,),
-                              Text('Blue', style: TextStyle(fontSize: 12),),
-                              SizedBox(width: 8,),
-                              SizedBox(height: 20, child: VerticalDivider(thickness: 1, color: Colors.black,)),
-                              SizedBox(width: 8,),
-                              Text('Size = M', style: TextStyle(fontSize: 12),),
+                              const SizedBox(width: 8,),
+                              const Text('Blue', style: TextStyle(fontSize: 12),),
+                              const SizedBox(width: 8,),
+                              const SizedBox(height: 20, child: VerticalDivider(thickness: 1, color: Colors.black,)),
+                              const SizedBox(width: 8,),
+                              const Text('Size = M', style: TextStyle(fontSize: 12),),
                             ],
                           ),
                           Row(
                             children: [
                               Text('\$ 126.0', style: TextStyle(fontSize: 20, color: AppColors.primaryColor),),
-                              SizedBox(width: 30,),
+                              const SizedBox(width: 30,),
                               Container(
                                   width: 30,
                                   height: 30,
@@ -116,9 +115,9 @@ class _CartState extends State<Cart> {
                                   ),
                                   child: Icon(Icons.remove, size: 16, color: AppColors.primaryColor,)
                               ),
-                              SizedBox(width: 10,),
-                              Text('1', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 10,),
+                              const SizedBox(width: 10,),
+                              const Text('1', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                              const SizedBox(width: 10,),
                               Container(
                                   width: 30,
                                   height: 30,
@@ -148,17 +147,17 @@ class _CartState extends State<Cart> {
                       borderRadius: BorderRadius.circular(30.0),
                       side: BorderSide.none
                   ),
-                  minimumSize: Size(350, 46),
+                  minimumSize: const Size(350, 46),
                   backgroundColor: AppColors.mainColor,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       fontWeight: FontWeight.bold),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(MyFlutterApp.checkout, size: 18,),
-                    Text('GO TO CHECKOUT', style: TextStyle(fontSize: 18),),
+                    const Icon(MyFlutterApp.checkout, size: 18,),
+                    const Text('GO TO CHECKOUT', style: TextStyle(fontSize: 18),),
                     Container(
                         width: 70,
                         height: 30,
@@ -166,7 +165,7 @@ class _CartState extends State<Cart> {
                           color: AppColors.primaryColor,
                           borderRadius: BorderRadius.circular(5),
                         ),
-                        child: Center(child: Text('\$ 135.96', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),)),
+                        child: const Center(child: Text('\$ 135.96', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),)),
                     ),
                   ],
                 ),

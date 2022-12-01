@@ -5,6 +5,8 @@ class AppColors {
   // ignore: non_constant_identifier_names
   static Color mainColor = const Color(0xffFCB2AF);
   static Color primaryColor = const Color(0xffFF8480);
+  static Color successColor = const Color(0xff20C997);
+  static Color greenColor = const Color(0xffEFF9F5);
   static Color blueColor = const Color(0xffc0dae3);
   static Color starColor = const Color(0xffFF9900);
   static Color grayColor = const Color(0xffF5F5F5);

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
-import 'package:trendy_style/icons/my_flutter_app_icons.dart';
 
+// ignore: must_be_immutable
 class ProfileItem extends StatelessWidget {
   ProfileItem({
     super.key,
@@ -26,7 +23,7 @@ class ProfileItem extends StatelessWidget {
             size: 18,
             color: color,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Expanded(
@@ -34,7 +31,7 @@ class ProfileItem extends StatelessWidget {
             title,
             style: TextStyle(color: color, fontSize: 16),
           )),
-          !(title == "Logout") ? Icon(Icons.keyboard_arrow_right) : Container(),
+          !(title == "Logout") ? const Icon(Icons.keyboard_arrow_right) : Container(),
         ],
       ),
     );
