@@ -13,9 +13,10 @@ class ShippingAddress extends StatefulWidget {
 class _ShippingAddressState extends State<ShippingAddress> {
   final int _count = 10;
   final List<bool> _checkList = [];
-  _ShippingAddressState(){
-    for(var i = 0; i < _count; i++){
-      _checkList.add(true);
+  _ShippingAddressState() {
+    _checkList.add(true);
+    for (var i = 1; i < _count; i++) {
+      _checkList.add(false);
     }
   }
   @override
@@ -37,10 +38,12 @@ class _ShippingAddressState extends State<ShippingAddress> {
               'Shipping Address',
             ),
             actions: [
-              IconButton(onPressed: (){}, icon: const Icon(
-                Icons.add,
-                color: Colors.black,
-              ))
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    color: Colors.black,
+                  ))
             ],
           ),
           body: ListView.builder(
@@ -77,17 +80,26 @@ class _ShippingAddressState extends State<ShippingAddress> {
                         ],
                       ),
                       Radio<bool>(
-                        fillColor: MaterialStateProperty.resolveWith ((Set  states) {
+                        fillColor:
+                            MaterialStateProperty.resolveWith((Set states) {
                           if (states.contains(MaterialState.disabled)) {
                             return AppColors.primaryColor.withOpacity(.32);
                           }
                           return AppColors.primaryColor;
                         }),
                         value: _checkList[index],
-                        groupValue: _checkList[index],
+                        groupValue: true,
                         onChanged: (bool? value) {
                           setState(() {
-                            _checkList[index] = value!;
+                            for (int i = 0; i < _count; i++) {
+                              if (_checkList[i]) {
+                                _checkList[i] = false;
+                                break;
+                              }
+                            }
+                            _checkList[index] = !_checkList[index];
+                            print(value.toString() +
+                                " index: ${index} ${_checkList[index]}");
                           });
                         },
                       ),
