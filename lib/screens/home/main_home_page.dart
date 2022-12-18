@@ -56,7 +56,7 @@ class _MainHomePageState extends State<MainHomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: 490 + 100 * _count.toDouble(),
+          height: 560 + 100 * _count.toDouble(),
           padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
@@ -89,8 +89,8 @@ class _MainHomePageState extends State<MainHomePage> {
                             size: 24,
                           ),
                           isDense: true, // Added this
-                          contentPadding:
-                              const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 0),
                         ),
                       ),
                     ),
@@ -135,7 +135,8 @@ class _MainHomePageState extends State<MainHomePage> {
                           color: index != 0
                               ? AppColors.grayColor
                               : AppColors.mainColor,
-                          borderRadius: const BorderRadius.all(Radius.circular(7)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(7)),
                         ),
                         child: Center(
                             child: Text(
@@ -196,8 +197,9 @@ class _MainHomePageState extends State<MainHomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 180,
+                height: 190,
                 child: GridView.count(
+                    physics: NeverScrollableScrollPhysics(),
                     padding: EdgeInsets.zero,
                     primary: false,
                     crossAxisSpacing: 10,
@@ -283,15 +285,16 @@ class _MainHomePageState extends State<MainHomePage> {
                                             minRating: 1,
                                             direction: Axis.horizontal,
                                             itemCount: 5,
-                                            itemPadding: const EdgeInsets.symmetric(
-                                                horizontal: 2.0),
-                                            itemBuilder: (context, _) => const Icon(
+                                            itemPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 2.0),
+                                            itemBuilder: (context, _) =>
+                                                const Icon(
                                               MyFlutterApp.star,
                                               color: Colors.amber,
                                             ),
                                             itemSize: 16,
-                                            onRatingUpdate: (rating) {
-                                            },
+                                            onRatingUpdate: (rating) {},
                                           ),
                                         ],
                                       ),
