@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:trendy_style/screens/cart/cart.dart';
+import 'package:trendy_style/screens/closet/closet.dart';
 import 'package:trendy_style/screens/home/main_home_page.dart';
 import 'package:trendy_style/screens/profile/profile.dart';
+import 'package:trendy_style/screens/try_on/try_on.dart';
 import 'package:trendy_style/utilities/colors.dart';
 
 import '../../icons/my_flutter_app_icons.dart';
@@ -17,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   List pages = [
     const MainHomePage(),
     const Cart(),
-    const MainHomePage(),
-    const MainHomePage(),
+    const TryOn(),
+    const Closet(),
     const Profile(),
   ];
   int currentIndex = 0;
