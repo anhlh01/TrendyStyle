@@ -3,6 +3,10 @@ import 'package:trendy_style/screens/cart/cart.dart';
 import 'package:trendy_style/screens/checkout/checkout.dart';
 import 'package:trendy_style/screens/closet/closet.dart';
 import 'package:trendy_style/screens/favorite/favorite.dart';
+import 'package:trendy_style/screens/get_info/get_gender.dart';
+import 'package:trendy_style/screens/get_info/get_height.dart';
+import 'package:trendy_style/screens/get_info/get_weight.dart';
+import 'package:trendy_style/screens/get_info/go_premium.dart';
 import 'package:trendy_style/screens/home/home_page.dart';
 import 'package:trendy_style/screens/home/main_home_page.dart';
 import 'package:trendy_style/screens/notification/notification.dart';
@@ -41,6 +45,6 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: HomePage());
+        home: GetGender());
   }
 }
