@@ -78,6 +78,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  flutter_rating_bar:
+    dependency: "direct main"
+    description:
+      name: flutter_rating_bar
+      sha256: d2af03469eac832c591a1eba47c91ecc871fe5708e69967073c043b2d775ed93
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -91,6 +99,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.17.0"
+  intl_phone_field:
+    dependency: "direct main"
+    description:
+      name: intl_phone_field
+      sha256: "0d2b35d148ed28a454d50797e6c2fb297f0a295feab84641b02d3dd32294b3f3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   js:
     dependency: transitive
     description:
@@ -200,6 +224,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  syncfusion_flutter_barcodes:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_barcodes
+      sha256: "27fa48f2f5ea160f11fbc88dfbf0f34502ccd547c8bb1a52ae69b7ceab52afc5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "20.3.59"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: c38cb76853bb6f0f77cc5b1318f602bb2acbd71196053696c2b27c0b95e20641
+      url: "https://pub.dev"
+    source: hosted
+    version: "20.3.59"
   term_glyph:
     dependency: transitive
     description:
